@@ -5,8 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acompanhe suas despesas</title>
+
+    <link rel="stylesheet" href="assets/CSS/styles.css">
 </head>
 <body>
-    <h1>Controle de despesas</h1>
+
+    <div class="wrapper">
+        <div class="tela-esq">
+            <div class="tela-esq__saldo">
+                <h1 clas="saldo__titulo">Saldo atual</h1>
+                <span class="saldo__data">06/11/22</span>
+                <h2 class="saldo__valor">R$00,00</h2>
+            </div>
+
+            <div class="tela-esq__fluxo">
+
+                <div class="Renda">
+                    <h3 class="renda__titulo">Renda</h3>
+                    <span class="renda__valor">R$00,00</span>
+                </div>
+                <div class="gastos">
+                    <h3 class="gastos__titulo">Gastos</h3>
+                    <span class="gastos__valor">R$00,00</span>
+                </div>
+            </div>  
+        </div>
+
+        <div class="tela-dir">
+            <h2 class="tela-dir__tiulo">Controle de despesas</h2>
+
+            <form action="" id="formulario">
+                <select name="select" class="formulario__seleciona">
+                    <option value="valor1">Renda</option>
+                    <option value="valor2" >Gasto</option>
+                </select>
+
+                <input type="text" class="formulario__entrada" id="descricao" placeholder="Descrição" required>
+                <input type="text" class="formulario__entrada" id="valor" placeholder="Valor" required>
+            
+                <button id="formulario__adicionar" type="submit">Adicionar</button>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>
