@@ -16,6 +16,34 @@
     padding: 3rem;
 }
 
+.tela-esq__saldo {
+    border: 2px solid #222;
+    border-radius: 8px;
+
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+
+    margin-top: 4rem;
+    padding: 1rem 2rem;
+}
+
+.tela-esq__fluxo {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.renda, .gastos {
+    border: 2px solid #222;
+    border-radius: 8px;
+
+    padding: 1rem 2rem;
+}
+
+.Renda {
+    margin-right: 2rem;
+}
+
+
+
 .tela-dir {
     width: 60vw;
     justify-self: center;
