@@ -39,11 +39,20 @@ btnAdicionar.addEventListener('click', (e) => {
     itemValor = document.createTextNode(objeto.valor)
 
   
+    lista.innerHTML = `
 
-    item.appendChild(itemDescricao)
-    item.appendChild(itemValor)
+        <li> 
+            Descricao: <p class="verde"> ${objeto.descricao}</p>
+            Valor: <p class="vermelho"> ${objeto.valor}</p> 
+        </li>
+    
+    `
 
-    lista.appendChild(item)
+
+    //item.appendChild(itemDescricao)
+    //item.appendChild(itemValor)
+
+    //lista.appendChild(item)
 
     
     console.log(itemValor.className)

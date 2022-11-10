@@ -109,6 +109,14 @@
     background-color:    #6666ff;
 }
 
-.cor {
-    color: blue;
+li {
+    list-style: none;
+}
+
+.verde {
+    color: green;
+}
+
+.vermelho {
+    color: red;
 }
