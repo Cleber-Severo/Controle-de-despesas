@@ -16,24 +16,29 @@ btnAdicionar.addEventListener('click', (e) => {
     
     if(selecionar.value == 1) {
         entradaValor.value = entradaValor.value * 1
+
+        
     } else {
         entradaValor.value = entradaValor.value * -1
     }
 
     var objeto = {descricao: entradaDescricao.value, valor: entradaValor.value}
 
-
-
-    console.log(objeto.descricao, objeto.valor)
-
     lista.innerHTML += `
 
-        <li> 
-            Descricao: <span class="verde"> ${objeto.descricao}</span>
-            Valor: <span class="vermelho"> ${objeto.valor}</span> 
+        <li class="lista__despesas"> 
+            <span class="item__despesas"> Descricao:  ${objeto.descricao}</span>
+            <span class="item__despesas"> Valor:  ${objeto.valor}</span> 
         </li>
     
     `
+    var listaDespesa = document.querySelector(".lista__despesas")
+    
+    listaDespesa.classList.add('positivo') 
+
+   
+    
+    
 
     entradaDescricao.value = ''
     entradaValor.value = ''

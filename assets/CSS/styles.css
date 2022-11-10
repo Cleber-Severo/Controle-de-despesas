@@ -90,6 +90,10 @@
     width: 40%;
 }
 
+#formulario {
+    margin-bottom: 1.5rem;
+}
+
 #formulario__adicionar {
     border: none;
     border-radius: 4px;
@@ -109,14 +113,37 @@
     background-color:    #6666ff;
 }
 
+
 li {
     list-style: none;
 }
 
-.verde {
-    color: green;
+.lista__despesas {
+    width: 100%;
+    background-color: white;
+    padding: 1rem 2rem;
+
+    border-right: 6px solid blue;
+    border-bottom: 1px solid #ccc;
+
+    display: flex;
+    justify-content: space-between;
 }
 
-.vermelho {
-    color: red;
+.item__despesas {
+    margin-right: 1rem;
+}
+
+.cor {
+    color: #0000cc;
+}
+
+.positivo {
+    border-right: 4px solid green;
+    border-radius: 2px;
+}
+
+.negativo {
+     border-right: 6px solid red;
+     border-radius: 2px;
 }
