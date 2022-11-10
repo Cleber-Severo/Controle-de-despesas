@@ -26,9 +26,19 @@ btnAdicionar.addEventListener('click', (e) => {
 
     console.log(objeto.descricao, objeto.valor)
 
-  
+    lista.innerHTML += `
 
+        <li> 
+            Descricao: <span class="verde"> ${objeto.descricao}</span>
+            Valor: <span class="vermelho"> ${objeto.valor}</span> 
+        </li>
     
+    `
+
+    entradaDescricao.value = ''
+    entradaValor.value = ''
+
+      /*
     const item = document.createElement("li")
     var itemDescricao = document.createElement("p")
     itemDescricao = document.createTextNode(objeto.descricao)
@@ -38,27 +48,12 @@ btnAdicionar.addEventListener('click', (e) => {
 
     itemValor = document.createTextNode(objeto.valor)
 
-  
-    lista.innerHTML = `
-
-        <li> 
-            Descricao: <p class="verde"> ${objeto.descricao}</p>
-            Valor: <p class="vermelho"> ${objeto.valor}</p> 
-        </li>
     
-    `
+    item.appendChild(itemDescricao)
+    item.appendChild(itemValor)
 
+    lista.appendChild(item)
 
-    //item.appendChild(itemDescricao)
-    //item.appendChild(itemValor)
-
-    //lista.appendChild(item)
-
-    
-    console.log(itemValor.className)
-
-
-    entradaDescricao.value = ""
-    entradaValor.value = ""
+    */
 
 })
