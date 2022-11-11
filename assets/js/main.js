@@ -1,64 +1,25 @@
 const selecionar = document.querySelector(".formulario__seleciona")
-const btnAdicionar = document.getElementById('formulario__adicionar')
-const entradaDescricao = document.getElementById('descricao')
-const entradaValor = document.getElementById('valor')
-const lista = document.getElementById('lista')
+const btnAdicionar = document.querySelector('#formulario__adicionar')
+const entradaDescricao = document.querySelector('#descricao')
+const entradaValor = document.querySelector('#valor')
+const lista = document.querySelector('#lista')
 
-var despesas = []
+var listaDespesa = [ 
+    { id: 0, descricao: 'Rendimentos fundos', valor: 200 },
+    { id: 1, descricao: 'Seguro', valor: -190 },
+    { id: 2, descricao: 'Salário', valor: 2800 },
+    { id: 3, descricao: 'Spotify', valor: -24 }
+]
 
+const addTransacao = transacao => {
 
+    const operador = transacao.valor < 0 ? '-' : '+'
 
-btnAdicionar.addEventListener('click', (e) => {
+    //<!--  <span> ${} ${} R$ ${} </span>   -->
 
-    e.preventDefault()
+    console.log(operador);
+}
 
+console.log(listaDespesa);
 
-    
-    if(selecionar.value == 1) {
-        entradaValor.value = entradaValor.value * 1
-
-        
-    } else {
-        entradaValor.value = entradaValor.value * -1
-    }
-
-    var objeto = {descricao: entradaDescricao.value, valor: entradaValor.value}
-
-    lista.innerHTML += `
-
-        <li class="lista__despesas"> 
-            <span class="item__despesas"> ${objeto.descricao}</span>
-            <span class="item__despesas"> R$${objeto.valor}</span> 
-        </li>
-    
-    `
-    var listaDespesa = document.querySelector(".lista__despesas")
-    
-    listaDespesa.classList.add('positivo') 
-
-   
-    
-    
-
-    entradaDescricao.value = ''
-    entradaValor.value = ''
-
-      /*
-    const item = document.createElement("li")
-    var itemDescricao = document.createElement("p")
-    itemDescricao = document.createTextNode(objeto.descricao)
-    
-    var itemValor = document.createElement("p")
-    itemValor.classList = "cor"
-
-    itemValor = document.createTextNode(objeto.valor)
-
-    
-    item.appendChild(itemDescricao)
-    item.appendChild(itemValor)
-
-    lista.appendChild(item)
-
-    */
-
-})
+addTransacao(listaDespesa[3])

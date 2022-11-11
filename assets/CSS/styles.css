@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
- input, select  {
+ input  {
     border: none;
 }
 
@@ -87,13 +87,18 @@
 }
 
 #descricao {
-    width: 40%;
+    width: 50%;
 }
+
+ #valor {
+    width:30% ;
+
+ }
 
 #formulario {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
-    
+
     width: 100%;
 }
 
@@ -111,6 +116,7 @@
 
     font-weight: 600;
 
+    width: auto;
 }
 
 #formulario__adicionar:hover {
