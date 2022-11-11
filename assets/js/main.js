@@ -27,8 +27,8 @@ btnAdicionar.addEventListener('click', (e) => {
     lista.innerHTML += `
 
         <li class="lista__despesas"> 
-            <span class="item__despesas"> Descricao:  ${objeto.descricao}</span>
-            <span class="item__despesas"> Valor:  ${objeto.valor}</span> 
+            <span class="item__despesas"> ${objeto.descricao}</span>
+            <span class="item__despesas"> R$${objeto.valor}</span> 
         </li>
     
     `

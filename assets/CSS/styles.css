@@ -92,6 +92,7 @@
 
 #formulario {
     margin-bottom: 1.5rem;
+    width: 100%;
 }
 
 #formulario__adicionar {
@@ -116,6 +117,7 @@
 
 li {
     list-style: none;
+    margin-bottom: .5rem;
 }
 
 .lista__despesas {
@@ -123,15 +125,19 @@ li {
     background-color: white;
     padding: 1rem 2rem;
 
-    border-right: 6px solid blue;
+    
     border-bottom: 1px solid #ccc;
 
     display: flex;
     justify-content: space-between;
+
+    width: 80%;
+
+    margin: 0 auto;
 }
 
 .item__despesas {
-    margin-right: 1rem;
+   font-weight: 700;
 }
 
 .cor {
@@ -139,8 +145,8 @@ li {
 }
 
 .positivo {
-    border-right: 4px solid green;
-    border-radius: 2px;
+    border-right: 10px solid green;
+    border-radius: 4px;
 }
 
 .negativo {
