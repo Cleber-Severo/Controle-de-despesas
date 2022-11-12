@@ -14,6 +14,8 @@ body {
 input:focus {
     background-color: #a366ff;
     color: white;
+
+    outline-color: #595959;
 }
 
 input:focus::placeholder {
@@ -45,8 +47,6 @@ input:focus::placeholder {
 
     border-radius: 8px;
 
-  
-
     margin-top: 4rem;
     padding: 1rem 2rem;
 }
@@ -71,9 +71,6 @@ input:focus::placeholder {
     justify-content: space-around;
     gap: 3rem;
     margin-top: 3rem;
-
-    
-
 }
 .renda, .gastos {
     padding: 1rem 1.4rem;
@@ -214,4 +211,35 @@ li {
 
 .item__despesas {
    font-weight: 700;
+}
+
+@media screen and (max-width:768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .tela-dir, .tela-esq {
+        width: 100%;
+    }
+
+    .tela-dir {
+        height: 100%;
+    }
+
+    .tela-esq {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .tela-esq__fluxo {
+        margin: .5rem;
+    }
+
+    .tela-esq__fluxo, .tela-esq__saldo {
+        padding: 1rem;
+
+        width: 85vw;
+    }
 }
