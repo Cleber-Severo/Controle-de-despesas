@@ -1,6 +1,9 @@
 const btnAdicionar = document.querySelector('#formulario__adicionar')
 const entradaDescricao = document.querySelector('#descricao')
 const entradaValor = document.querySelector('#valor')
+const mostraSaldo = document.querySelector('.saldo__valor')
+const mostraRenda = document.querySelector('.renda__valor')
+const mostraGastos = document.querySelector('.gastos__valor')
 const lista = document.querySelector('#listaDespesas')
 
 var listaDespesa = [ 
@@ -10,28 +13,50 @@ var listaDespesa = [
     { id: 3, descricao: 'Spotify', valor: -24 }
 ]
 
+//função para adicionar transações
 const addTransacao = transacao => {
 
-    const operador = transacao.valor < 0 ? '-' : '+'
-    const tipoAddClasse = transacao.valor < 0 ? 'negativo' : 'positivo'
-    const valorSemOperador = Math.abs(transacao.valor)
-    const itemLista = document.createElement('li')
+    const operador = transacao.valor < 0 ? '-' : '+'                    //testa se é menor ou maior que zero e atribui um sinal
+    const tipoAddClasse = transacao.valor < 0 ? 'negativo' : 'positivo' //faz o mesmo teste para os nomes de variaveis
+    const valorSemOperador = Math.abs(transacao.valor)                  //recebe apenas o valor absoluto para evitar conflitos
+    const itemLista = document.createElement('li')                      
 
     itemLista.classList.add(tipoAddClasse)
     itemLista.innerHTML = `
          <span>  ${transacao.descricao} </span> <span>${operador} R$ ${valorSemOperador} </span> 
-    `
+    ` 
 
     lista.append(itemLista)
-
-    //<!--  <span> ${} ${} R$ ${} </span>   -->
-
-    console.log(operador);
 }
 
-console.log(listaDespesa);
+//função para atualizar e mostrar na tela a soma dos valores de saldo, renda e gastos
+const atualizaValores = () => {
+    const listaValores = listaDespesa
+        .map(despesa => despesa.valor)
+    const saldoTotal = listaValores
+        .reduce((acumulador, item) => acumulador + item, 0)
+        .toFixed(2)
+    const gastosTotal = Math.abs(listaValores
+        .filter((item) => item < 0)
+        .reduce((acumulador, item) => acumulador + item, 0))
+        .toFixed(2)
+    const rendaTotal = listaValores
+        .filter((item) => item > 0)
+        .reduce((acumulador, item) => acumulador + item, 0)
+        .toFixed(2)
 
-addTransacao(listaDespesa[1])
-addTransacao(listaDespesa[0])
-addTransacao(listaDespesa[2])
-addTransacao(listaDespesa[3])
+    mostraSaldo.textContent = `R$ ${saldoTotal}`
+    mostraRenda.textContent = `R$ ${rendaTotal}`
+    mostraGastos.textContent = `R$ ${gastosTotal}`
+
+
+}
+
+//função para inicializar o programa
+const inicializa = () => {
+    listaDespesa.forEach(addTransacao) //para cada elemento da lista, chamar a função e adicionar o item a pagina 
+    
+    atualizaValores()
+}
+
+inicializa()

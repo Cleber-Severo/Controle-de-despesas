@@ -60,9 +60,11 @@ body {
     border-radius: 4px;
 
     display: flex;
+    justify-content: space-around;
+    gap: 3rem;
     margin-top: 3rem;
 
-    padding: 0 1rem;
+    
 
 }
 .renda, .gastos {
@@ -72,6 +74,7 @@ body {
 
 .renda {
     margin-right: 1rem;
+
 }
 
 .renda__titulo, .gastos__titulo {
@@ -85,10 +88,12 @@ body {
 
 .renda__valor {
     color: green;
+    display: block;
 }
 
 .gastos__valor {
     color: red;
+    display: block;
 }
 
 
