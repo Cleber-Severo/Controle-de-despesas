@@ -175,19 +175,25 @@ li {
     margin-bottom: .5rem;
 }
 
+#listaDespesas {
+
+    height: 80%;
+    overflow-y: scroll;
+    padding: 0 .5rem;
+}
+
 #listaDespesas li {
-      width: 100%;
     background-color: white;
-    padding: 1rem 2rem;
 
-    
     border-bottom: 1px solid #ccc;
-
+    
     display: flex;
     justify-content: space-between;
-
-
-    width: 90%;
+    
+    padding: 1rem 2rem;
+    
+    height: auto;
+    width: 100%;
 
 }
 

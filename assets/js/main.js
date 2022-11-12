@@ -6,12 +6,8 @@ const mostraRenda = document.querySelector('.renda__valor')
 const mostraGastos = document.querySelector('.gastos__valor')
 const lista = document.querySelector('#listaDespesas')
 
-var listaDespesa = [ 
-    { id: 0, descricao: 'Rendimentos fundos', valor: 200 },
-    { id: 1, descricao: 'Seguro', valor: -190 },
-    { id: 2, descricao: 'Salário', valor: 2800 },
-    { id: 3, descricao: 'Spotify', valor: -24 }
-]
+
+var listaDespesa = [ ]
 
 //função para adicionar transações
 const addTransacao = transacao => {
@@ -54,9 +50,35 @@ const atualizaValores = () => {
 
 //função para inicializar o programa
 const inicializa = () => {
+
+    lista.innerHTML = ''
     listaDespesa.forEach(addTransacao) //para cada elemento da lista, chamar a função e adicionar o item a pagina 
     
     atualizaValores()
 }
 
 inicializa()
+
+btnAdicionar.addEventListener('click', event => {
+    event.preventDefault()
+    const transacaoDescricao = entradaDescricao.value.trim()
+    const transacaoValor = entradaValor.value.trim()
+
+
+    if (transacaoDescricao === '' || transacaoValor === '') {
+        alert('Por favor, preencha descrição e valor!')
+        return
+    }
+
+    var transacao = { 
+        id: 0, 
+        descricao: transacaoDescricao, 
+        valor: Number(transacaoValor)
+    }
+
+    listaDespesa.unshift(transacao)
+    inicializa()
+
+    entradaDescricao.value = ''
+    entradaValor.value = ''
+})
