@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acompanhe suas despesas</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/CSS/styles.css">
 </head>
 <body>
@@ -14,19 +18,18 @@
         <div class="tela-esq">
             <div class="tela-esq__saldo">
                 <h1 clas="saldo__titulo">Saldo atual</h1>
-                <span class="saldo__data">06/11/22</span>
-                <h2 class="saldo__valor">R$00,00</h2>
+                <h2 class="saldo__valor">R$ 00,00</h2>
             </div>
 
             <div class="tela-esq__fluxo">
 
                 <div class="renda">
                     <span class="renda__titulo">Renda:</span>
-                    <span class="renda__valor">R$00,00</span>
+                    <span class="renda__valor">R$ 00,00</span>
                 </div>
                 <div class="gastos">
                     <span class="gastos__titulo">Gastos:</span>
-                    <span class="gastos__valor">R$00,00</span>
+                    <span class="gastos__valor">R$ 00,00</span>
                 </div>
             </div>  
         </div>
@@ -36,7 +39,7 @@
 
             <form action="" id="formulario">
                 
-                <span class="formulario__aviso">Valores: + p/ inserir renda | - p/ inserir gastos</span>
+                <span class="formulario__aviso">Valor: positivo(+) receita | negativo(-) gastos</span>
 
                 <input type="text" class="formulario__entrada" id="descricao" placeholder="Descrição">
                 <input type="text" class="formulario__entrada" id="valor" placeholder="Valor">
@@ -46,7 +49,7 @@
                 
             </form>
 
-            <ul id="lista"></ul>
+            <ul id="listaDespesas"></ul>
         </div>
     </div>
 

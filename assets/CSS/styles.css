@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;;
+}
+
  input  {
     border: none;
 }
@@ -22,10 +26,7 @@
     padding: .8rem 3rem;
 }
 
-.saldo__valor {
-    margin-top: 1rem;
-    font-weight: 500;
-}
+
 
 .tela-esq__saldo, .renda, .gastos
 {
@@ -34,13 +35,24 @@
 
 .tela-esq__saldo {
 
-    
     border-radius: 8px;
 
   
 
     margin-top: 4rem;
     padding: 1rem 2rem;
+}
+
+.tela-esq__saldo h1 {
+    color: #262626;
+}
+
+.saldo__valor {
+    color: #008ae6;
+    font-weight: 700;
+
+    margin-top: .2rem;
+    
 }
 
 .tela-esq__fluxo {
@@ -54,7 +66,8 @@
 
 }
 .renda, .gastos {
-    padding: 1rem 2rem;
+    padding: 1rem 1.4rem;
+    color: #262626;
 }
 
 .renda {
@@ -70,6 +83,14 @@
     font-weight: 500;
 }
 
+.renda__valor {
+    color: green;
+}
+
+.gastos__valor {
+    color: red;
+}
+
 
 .tela-dir {
     width: 60vw;
@@ -80,9 +101,12 @@
     padding: 3rem;
 }
 
+.tela-dir__tiulo {
+    color: #262626;
+}
 
 
-.formulario__entrada, #formulario__adicionar,.formulario__seleciona {
+.formulario__entrada, #formulario__adicionar{
     padding: .5rem 1rem;
 }
 
@@ -96,15 +120,19 @@
  }
 
 #formulario {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
+    margin: 1rem auto 1.5rem auto ;
 
     width: 100%;
 }
 
 .formulario__aviso {
+    font-weight: 600;
+
     display: block;
-    color: #a1a1a1;
+    color: #737373;
+
+    margin-bottom: .2rem;
+    margin-left: 8px;
 }
 
 #formulario__adicionar {
@@ -117,6 +145,7 @@
     font-weight: 600;
 
     width: auto;
+    margin-left: .2rem;
 }
 
 #formulario__adicionar:hover {
@@ -133,8 +162,8 @@ li {
     margin-bottom: .5rem;
 }
 
-.lista__despesas {
-    width: 100%;
+#listaDespesas li {
+      width: 100%;
     background-color: white;
     padding: 1rem 2rem;
 
@@ -144,17 +173,14 @@ li {
     display: flex;
     justify-content: space-between;
 
-    width: 80%;
 
-    margin: 0 auto;
+    width: 90%;
+
 }
 
-.item__despesas {
-   font-weight: 700;
-}
-
-.cor {
-    color: #0000cc;
+#listaDespesas li span {
+    color: #595959;
+    font-weight: 600;
 }
 
 .positivo {
@@ -163,6 +189,10 @@ li {
 }
 
 .negativo {
-     border-right: 6px solid red;
-     border-radius: 2px;
+     border-right: 10px solid red;
+     border-radius: 4px;
+}
+
+.item__despesas {
+   font-weight: 700;
 }
