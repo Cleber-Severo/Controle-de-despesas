@@ -1,0 +1,46 @@
+
+#listaDespesas {
+
+    height: 80%;
+    overflow-y: scroll;
+    padding: 0 .5rem;
+
+}
+
+#listaDespesas li {
+
+    background-color: white;
+    
+    border-bottom: 1px solid #ccc;
+    
+    display: flex;
+    justify-content: space-between;
+    
+    list-style: none;
+
+    margin-bottom: .5rem;
+    padding: 1rem 2rem;
+    
+    height: auto;
+    width: 100%;
+
+}
+
+#listaDespesas li span {
+    color: #595959;
+    font-weight: 600;
+}
+
+.positivo {
+    border-right: 10px solid green;
+    border-radius: 4px;
+}
+
+.negativo {
+     border-right: 10px solid red;
+     border-radius: 4px;
+}
+
+.item__despesas {
+   font-weight: 700;
+}

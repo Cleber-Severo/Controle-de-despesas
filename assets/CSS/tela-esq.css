@@ -1,0 +1,92 @@
+
+.tela-esq {
+    width: 40vw;
+    background-color:  #196666;
+
+    padding: .8rem 3rem;
+}
+
+
+
+.tela-esq__saldo, .renda, .gastos
+{
+    background-color: #d6f5f5;
+}
+
+.tela-esq__saldo {
+
+    border-radius: 8px;
+
+    margin-top: 4rem;
+    padding: 1rem 2rem;
+}
+
+.tela-esq__saldo h1 {
+    color: #262626;
+}
+
+.saldo__valor {
+    color: #008ae6;
+    font-weight: 700;
+
+    margin-top: .2rem;
+    
+}
+
+.tela-esq__fluxo {
+    background-color: #d6f5f5;
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+.renda, .gastos {
+    padding: 1rem 1.4rem;
+    color: #262626;
+}
+
+.renda {
+    margin-right: 1rem;
+
+}
+
+.renda__titulo, .gastos__titulo {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.renda__valor, .gastos__valor {
+    font-weight: 500;
+}
+
+.renda__valor {
+    color: green;
+    display: block;
+}
+
+.gastos__valor {
+    color: red;
+    display: block;
+}
+
+@media screen and (max-width:768px) {
+    
+    .tela-esq {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .tela-esq__fluxo {
+        margin: .5rem;
+    }
+
+    .tela-esq__fluxo, .tela-esq__saldo {
+        padding: 1rem;
+
+        width: 85vw;
+    }
+}

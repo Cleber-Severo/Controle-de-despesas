@@ -1,0 +1,12 @@
+.tela-dir {
+    width: 60vw;
+    justify-self: center;
+
+    background-color: #d6f5f5;
+
+    padding: 3rem;
+}
+
+.tela-dir__tiulo {
+    color: #262626;
+}
