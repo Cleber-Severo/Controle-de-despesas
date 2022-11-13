@@ -1,3 +1,5 @@
+//definindo as variaveis globais
+
 const btnAdicionar = document.querySelector('#formulario__adicionar')
 const entradaDescricao = document.querySelector('#descricao')
 const entradaValor = document.querySelector('#valor')
