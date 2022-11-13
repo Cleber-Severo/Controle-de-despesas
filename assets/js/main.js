@@ -11,6 +11,8 @@ const lista = document.querySelector('#listaDespesas')
 
 var listaDespesa = [ ]
 
+
+
 //função para adicionar transações
 const addTransacao = transacao => {
 
@@ -20,11 +22,29 @@ const addTransacao = transacao => {
     const itemLista = document.createElement('li')                      
 
     itemLista.classList.add(tipoAddClasse)
+    
+    //button chama a funcção remove com o parametro do id atual no momento em que foi clicado
     itemLista.innerHTML = `
-         <span>  ${transacao.descricao} </span> <span>${operador} R$ ${valorSemOperador} </span> 
+        <div>
+            <button class="fecha" onClick="removeItem(${transacao.id})"> X </button> 
+            <span>  ${transacao.descricao} </span>
+        </div>
+       
+        <span>${operador} R$ ${valorSemOperador} </span>
+        
     ` 
 
     lista.append(itemLista)
+}
+
+//função para remover itens
+function removeItem (ID) {
+
+
+        listaDespesa = listaDespesa.filter((transacao) => transacao.id !== ID)
+        
+        
+        inicializa()
 }
 
 //função para atualizar e mostrar na tela a soma dos valores de saldo, renda e gastos
@@ -47,6 +67,13 @@ const atualizaValores = () => {
     mostraRenda.textContent = `R$ ${rendaTotal}`
     mostraGastos.textContent = `R$ ${gastosTotal}`
 
+
+}
+
+//gera um ID aleatorio para cada item
+const geraID =  () => {
+
+  return Math.floor(Math.random() * 10000);
 
 }
 
@@ -82,7 +109,7 @@ btnAdicionar.addEventListener('click', event => {
 
     //cria o objeto que recebe as informações dos inputs
     var transacao = { 
-        
+        id: geraID(),
         descricao: transacaoDescricao, 
         valor: Number(transacaoValor)
     }
@@ -94,4 +121,8 @@ btnAdicionar.addEventListener('click', event => {
     //limpa o valor dos inputs
     entradaDescricao.value = ''
     entradaValor.value = ''
+
+    console.log(transacao)
 })
+
+

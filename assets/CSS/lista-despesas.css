@@ -31,6 +31,8 @@
     font-weight: 600;
 }
 
+
+
 .positivo {
     border-right: 10px solid green;
     border-radius: 4px;
@@ -44,3 +46,31 @@
 .item__despesas {
    font-weight: 700;
 }
+
+.fecha {
+    background-color: red;
+    color: white;
+    font-weight: 700;
+
+    cursor: pointer;
+    display: none;
+    
+    padding: .2rem;
+    margin: 0;
+
+    border: none;
+
+    transition: all .5s ease;
+}
+
+#listaDespesas li:hover .fecha {
+    display: inline;
+     position: relative;
+    left: 0;
+    
+    float: left;
+    transform: translateX(-1.3rem);
+
+}
+
+
