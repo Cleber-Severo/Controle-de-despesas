@@ -59,26 +59,37 @@ const inicializa = () => {
 
 inicializa()
 
+//evento ao pressionar o botão de adicionar
 btnAdicionar.addEventListener('click', event => {
-    event.preventDefault()
+   
+    event.preventDefault() //previne que a pagina recarregue
+
+    //atribuição de variaveis para o que esttá sendo inserido nos inputs
     const transacaoDescricao = entradaDescricao.value.trim()
     const transacaoValor = entradaValor.value.trim()
 
-
+    //testa se os inputs estão vazios e gera um aviso
     if (transacaoDescricao === '' || transacaoValor === '') {
         alert('Por favor, preencha descrição e valor!')
         return
+    } else if (isNaN(transacaoValor)) {
+        alert('Inserir somente numeros aos valores das transações')
+        return
     }
 
+
+    //cria o objeto que recebe as informações dos inputs
     var transacao = { 
-        id: 0, 
+        
         descricao: transacaoDescricao, 
         valor: Number(transacaoValor)
     }
 
+    //adiciona as informações no inicio do array e chama a função que cria o item da lista a ser mostrado na tela  
     listaDespesa.unshift(transacao)
     inicializa()
 
+    //limpa o valor dos inputs
     entradaDescricao.value = ''
     entradaValor.value = ''
 })
