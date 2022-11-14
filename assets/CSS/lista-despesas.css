@@ -78,6 +78,7 @@
 @media screen and (max-width: 1024px) {
     #listaDespesas {
         height: 70%;
+        margin-top: 1rem;
     }
 
     #listaDespesas li {
