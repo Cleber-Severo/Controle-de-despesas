@@ -10,3 +10,29 @@
 .tela-dir__tiulo {
     color: #262626;
 }
+
+@media screen and (max-width: 1024px) {
+    .tela-dir{
+        height: 100%;
+        width: 100vw;
+        
+        padding-top: .8rem;
+        overflow-y: hidden;
+    }
+
+    .tela-dir__tiulo {
+        font-size: 20px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    .tela-dir {
+        padding: 1rem;
+    }
+
+    .tela-dir__tiulo {
+        font-size: 18px;
+    }
+}

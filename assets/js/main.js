@@ -41,9 +41,9 @@ const addTransacao = transacao => {
 function removeItem (ID) {
 
 
-        listaDespesa = listaDespesa.filter((transacao) => transacao.id !== ID)
-        
-        
+//gera um novo array com todos os itens eque possuem id diferente do item que o botao de fechar foi clicado
+
+        listaDespesa = listaDespesa.filter((transacao) => transacao.id !== ID) 
         inicializa()
 }
 

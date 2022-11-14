@@ -36,6 +36,8 @@
 .positivo {
     border-right: 10px solid green;
     border-radius: 4px;
+    margin: 0;
+    padding: 0;
 }
 
 .negativo {
@@ -73,4 +75,25 @@
 
 }
 
+@media screen and (max-width: 1024px) {
+    #listaDespesas {
+        height: 70%;
+    }
 
+    #listaDespesas li {
+        height: 2rem;
+
+        margin-bottom: .25rem;
+        padding: 0;
+        padding: 0 1rem;
+        
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 480px) {
+     #listaDespesas {
+        height: 57%;
+    }
+}

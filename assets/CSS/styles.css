@@ -16,17 +16,9 @@ body {
 
 
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .wrapper {
         flex-direction: column;
-    }
-
-    .tela-dir, .tela-esq {
-        width: 100%;
-    }
-
-    .tela-dir {
-        height: 100%;
     }
 
 }

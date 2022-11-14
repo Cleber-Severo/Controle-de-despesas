@@ -71,7 +71,7 @@
     display: block;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     
     .tela-esq {
         display: flex;
@@ -79,14 +79,81 @@
         justify-content: center;
         align-items: center;
 
+         width: 100%;
+
+         height: auto;
+        
+         margin: 0;
+         padding: 2rem 0;
+         
     }
+
+    .tela-esq__saldo, .tela-esq__fluxo {
+        width: 60%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .tela-esq__saldo{
+        padding: .2rem;
+        margin-bottom: .5rem;
+        padding-left: 8% ;
+
+        box-sizing: border-box;
+    }
+
+
+    .tela-esq__saldo h1{
+        font-size: 24px;
+        line-height: 2rem;   
+    }
+
+    .saldo__valor {
+        font-size: 18px;
+     
+    }
+
+    
     .tela-esq__fluxo {
-        margin: .5rem;
+        justify-content: center;
+        padding: .5rem 1rem;
+        box-sizing: border-box;
+    }
+   
+    .renda, .gastos {
+        padding: 0;
+        margin: 0;
     }
 
-    .tela-esq__fluxo, .tela-esq__saldo {
-        padding: 1rem;
-
-        width: 85vw;
+    .gastos__valor, .renda__valor {
+        display: inline-block;
     }
+}
+
+@media screen and (max-width: 480px) {
+    
+    .tela-esq__saldo, .tela-esq__fluxo {
+        width: 80%;
+    }
+
+    .tela-esq__saldo h1{
+        font-size: 24px;
+        line-height: 2rem;   
+    }
+
+    .saldo__valor {
+        font-size: 18px;
+        margin-top: -.2rem;
+     
+    }
+   
+    .renda__titulo, .gastos__titulo, .gastos__valor, .renda__valor {
+        font-size: 14px;
+    }
+
+    .renda__valor, .gastos__valor {
+        display: block;
+        margin-top: -.2rem;
+    }
+
 }
