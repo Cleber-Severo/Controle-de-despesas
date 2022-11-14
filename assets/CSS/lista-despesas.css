@@ -15,6 +15,7 @@
     
     display: flex;
     justify-content: space-between;
+    align-items: center;
     
     list-style: none;
 
@@ -75,7 +76,7 @@
 
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     #listaDespesas {
         height: 70%;
         margin-top: 1rem;

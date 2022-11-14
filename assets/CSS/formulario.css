@@ -65,7 +65,7 @@
     background-color:    #6666ff;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     #formulario {
         margin: .1rem auto 1rem auto ;
         padding-left: 1rem;
