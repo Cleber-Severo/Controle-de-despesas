@@ -40,11 +40,9 @@ const addTransacao = transacao => {
 //função para remover itens
 function removeItem (ID) {
 
-
 //gera um novo array com todos os itens eque possuem id diferente do item que o botao de fechar foi clicado
-
-        listaDespesa = listaDespesa.filter((transacao) => transacao.id !== ID) 
-        inicializa()
+    listaDespesa = listaDespesa.filter((transacao) => transacao.id !== ID) 
+    inicializa()
 }
 
 //função para atualizar e mostrar na tela a soma dos valores de saldo, renda e gastos
